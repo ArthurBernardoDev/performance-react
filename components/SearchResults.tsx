@@ -18,3 +18,8 @@ export function SearchResults({ results }: SearchResultsProps) {
     </div>
   );
 }
+/**
+ * 1 - Criar uma nova versão do component
+ * 2 - Comparar com a versão anterior
+ * 3 - Se houverem alterações, vai atualizar o que alterou
+ */
