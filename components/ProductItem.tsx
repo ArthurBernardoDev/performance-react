@@ -6,16 +6,23 @@ interface ProductItemProps {
     price: number;
     title: string;
   };
+  onAddToWishlist: (id: number) => void;
 }
 
 // shallow compare --> comparação rasa
 // {} === {} // false
 // igualdade referencial
 
-export function ProductItemComponent({ product }: ProductItemProps) {
+export function ProductItemComponent({
+  product,
+  onAddToWishlist,
+}: ProductItemProps) {
   return (
     <div>
       {product.title} - <strong>{product.price}</strong>
+      <button onClick={() => onAddToWishlist(product.id)}>
+        onAddToWishlist
+      </button>
     </div>
   );
 }
